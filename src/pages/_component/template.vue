@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="dark:bg-black dark:text-white">
     <button @click="isDark">{{model==='dark'?'正常模式':'暗色模式'}}</button>
     login
@@ -34,4 +34,4 @@ let changename = (newName: string) => {
 // router.push({
 // 	name: 'Index/user',
 // })
-</script>
+</script> -->

@@ -1,6 +1,6 @@
 <template>
   <div>
-    404 NotFind!
+    404 NotFound!
   </div>
 </template>
 <script setup lang="ts" >

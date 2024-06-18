@@ -17,10 +17,10 @@
     "noEmit": true,
     "jsx": "preserve",
     /* typesNode */
-    "baseUrl": "",
+    "baseUrl": "./",
     "paths": {
       "@/*": [
-        "./src/*"
+        "src/*"
       ]
     },
     /* Linting */

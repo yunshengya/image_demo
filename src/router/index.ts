@@ -1,5 +1,6 @@
 import { RouteLocationNormalized, RouteRecordRaw, createRouter, createWebHashHistory } from 'vue-router'
 import { RouterEnum } from '@/application/interface/public'
+
 export const routes: RouteRecordRaw[] = [
   {
     path: '/',
@@ -17,21 +18,16 @@ export const routes: RouteRecordRaw[] = [
     children: [
       {
         name: '默认页',
-        path: RouterEnum.Index,
+        path: '', // 默认页不需要再次指定 RouterEnum.Index
         redirect: RouterEnum.User,
       },
-      // {
-      //   path: RouterEnum.Content,
-      //   name: '内容',
-      //   component: () => import('@/pages/content/index.vue')
-      // },
       {
         name: '用户',
         path: RouterEnum.User,
         component: () => import('@/pages/content/user/user.vue'),
         children: [
           {
-            name: '图片',
+            name: '视频',
             path: RouterEnum.UserVideo,
             component: () => import('@/pages/content/user/video/video.vue')
           }
@@ -71,16 +67,13 @@ router.beforeEach((_to, _from, next) => {
 
 // 全局路由错误处理
 router.onError((error: Error, to: RouteLocationNormalized) => {
-  console.log(error);
-  
+  console.error('Router error:', error, 'to:', to);
+
   // 检查是否是动态导入模块失败的错误
-  if (error.message.includes('Failed to fetch dynamically imported module')) {
-    // 如果是，重定向到当前路径
-    window.location.href = to.fullPath as string; // 使用类型断言
-  }
+  // if (error.message.includes('Failed to fetch dynamically imported module')) {
+  //   // 使用 router.push() 导航到错误页面
+  //   router.push('/404'); // 可以根据实际的路由配置来替换成对应的错误页面路径
+  // }
 });
 
-
-
-
-export default router
+export default router;
