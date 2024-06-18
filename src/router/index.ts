@@ -1,4 +1,4 @@
-import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router'
+import { RouteRecordRaw, createRouter, createWebHashHistory } from 'vue-router'
 import { RouterEnum } from '@/application/interface/public'
 export const routes: RouteRecordRaw[] = [
   {
@@ -60,7 +60,7 @@ export const routes: RouteRecordRaw[] = [
 
 const router = createRouter({
   scrollBehavior: () => ({ left: 0, top: 0 }),
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 })
 
