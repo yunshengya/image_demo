@@ -8,12 +8,19 @@
   </div>
 </template> 
 <script lang="ts" setup>
-import router from "@/router";
+import router from '@/router'
 // 默认路由跳转
 router.push({
 	name: 'Index/User',
 })
 </script>
 <style lang="scss" scoped>
-@import '@/public/css/login.scss';
+.box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(45deg, #add8e6, #ffb6c1);
+}
 </style>

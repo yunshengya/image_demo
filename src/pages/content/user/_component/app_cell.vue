@@ -25,6 +25,27 @@ const routerTo = (path: any) => {
 	})
 }
 </script>
-<style lang="scss">
-@import '@/public/css/pages/content/user/_component/app_cell.scss';
+<style lang="scss" scoped>
+.app_cell {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	&:hover {
+		cursor: pointer;
+		transform: scale(1.2);
+	}
+	img {
+		width: 60px;
+		height: 60px;
+		border-radius: 20px;
+	}
+
+	&_title {
+		margin-top: 6px;
+		font-size: 12px;
+		color: #6a88a2;
+		letter-spacing: 2px;
+	}
+}
 </style>

@@ -94,5 +94,21 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@import '@/public/css/pages/content/user/user.scss';
+.box {
+	height: 100%;
+	overflow: auto;
+	width: 100%;
+
+	&_content {
+		padding: 16px;
+	}
+
+	&_content_cell {
+		display: flex;
+		margin: 2px;
+		&_item {
+			margin: 6px 12px;
+		}
+	}
+}
 </style>
