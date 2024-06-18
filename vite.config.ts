@@ -5,6 +5,13 @@ import autoprefixer from 'autoprefixer'
 import { resolve } from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/image_demo/',
+  build: {
+    outDir: 'dist',
+    rollupOptions: {
+      input: '/index.html'
+    }
+  },
   css: {
     postcss: {
       plugins: [
