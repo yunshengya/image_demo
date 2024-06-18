@@ -71,6 +71,8 @@ router.beforeEach((_to, _from, next) => {
 
 // 全局路由错误处理
 router.onError((error: Error, to: RouteLocationNormalized) => {
+  console.log(error);
+  
   // 检查是否是动态导入模块失败的错误
   if (error.message.includes('Failed to fetch dynamically imported module')) {
     // 如果是，重定向到当前路径
