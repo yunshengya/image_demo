@@ -1,4 +1,4 @@
-import { RouteRecordRaw, createRouter, createWebHashHistory } from 'vue-router'
+import { RouteLocationNormalized, RouteRecordRaw, createRouter, createWebHashHistory } from 'vue-router'
 import { RouterEnum } from '@/application/interface/public'
 export const routes: RouteRecordRaw[] = [
   {
@@ -16,7 +16,7 @@ export const routes: RouteRecordRaw[] = [
     component: () => import("@/pages/index.vue"),
     children: [
       {
-        name:'默认页',
+        name: '默认页',
         path: RouterEnum.Index,
         redirect: RouterEnum.User,
       },
@@ -26,13 +26,13 @@ export const routes: RouteRecordRaw[] = [
       //   component: () => import('@/pages/content/index.vue')
       // },
       {
-        name:'用户',
+        name: '用户',
         path: RouterEnum.User,
         component: () => import('@/pages/content/user/user.vue'),
-        children:[
+        children: [
           {
-            name:'图片',
-            path:RouterEnum.UserVideo,
+            name: '图片',
+            path: RouterEnum.UserVideo,
             component: () => import('@/pages/content/user/video/video.vue')
           }
         ]
@@ -68,6 +68,17 @@ const router = createRouter({
 router.beforeEach((_to, _from, next) => {
   next()
 })
+
+// 全局路由错误处理
+router.onError((error: Error, to: RouteLocationNormalized) => {
+  // 检查是否是动态导入模块失败的错误
+  if (error.message.includes('Failed to fetch dynamically imported module')) {
+    // 如果是，重定向到当前路径
+    window.location.href = to.fullPath as string; // 使用类型断言
+  }
+});
+
+
 
 
 export default router
