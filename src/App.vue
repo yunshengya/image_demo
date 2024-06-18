@@ -9,5 +9,5 @@
 import zhCN from 'ant-design-vue/es/locale/zh_CN'
 </script>
 <style  lang="scss">
-@import '/src/resource/css/global.scss'
+// @import '/src/resource/css/global.scss'
 </style>
