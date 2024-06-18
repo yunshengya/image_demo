@@ -26,5 +26,5 @@ const routerTo = (path: any) => {
 }
 </script>
 <style lang="scss">
-// @import '@/assets/css/pages/content/user/_component/app_cell.scss';
+@import '@/public/css/pages/content/user/_component/app_cell.scss';
 </style>

@@ -15,5 +15,5 @@ router.push({
 })
 </script>
 <style lang="scss" scoped>
-// @import '@/assets/css/login.scss';
+@import '@/public/css/login.scss';
 </style>
