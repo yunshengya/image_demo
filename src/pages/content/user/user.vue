@@ -16,7 +16,6 @@
     <router-view></router-view>
   </div>
 </template>
-
 <script setup lang="ts">
 import { axiosImgRand, axiosRand } from '@/application/server/axiosApi/axiosApi'
 import { onMounted, reactive } from 'vue'
@@ -57,6 +56,13 @@ const appList = reactive([
 		path: RouterEnum.UserImage,
 	},
 	{
+		name: '动漫(P)',
+		route: '',
+		url: '',
+		getImage: 'https://api.shenke.love/api/r18.php',
+		path: RouterEnum.UserImage,
+	},
+	{
 		name: '女生头像',
 		route: '',
 		url: '',
@@ -88,7 +94,7 @@ const appList = reactive([
 		name: 'baisi',
 		route: '',
 		url: '',
-    params:'return=302',
+		params: 'return=302',
 		getImage: 'https://v2.api-m.com/api/baisi',
 		path: RouterEnum.UserImage,
 	},
@@ -96,7 +102,7 @@ const appList = reactive([
 		name: 'heisi',
 		route: '',
 		url: '',
-    params:'return=302',
+		params: 'return=302',
 		getImage: 'https://v2.api-m.com/api/heisi',
 		path: RouterEnum.UserImage,
 	},
@@ -104,7 +110,7 @@ const appList = reactive([
 		name: 'wallpaper',
 		route: '',
 		url: '',
-    params:'return=302',
+		params: 'return=302',
 		getImage: 'https://v2.api-m.com/api/wallpaper',
 		path: RouterEnum.UserImage,
 	},
@@ -112,8 +118,40 @@ const appList = reactive([
 		name: 'head',
 		route: '',
 		url: '',
-    params:'return=302',
+		params: 'return=302',
 		getImage: 'https://v2.api-m.com/api/head',
+		path: RouterEnum.UserImage,
+	},
+	{
+		name: 'pcGirl',
+		route: '',
+		url: '',
+		params: '',
+		getImage: 'https://api.vvhan.com/api/wallpaper/pcGirl',
+		path: RouterEnum.UserImage,
+	},
+	{
+		name: 'mobileGirl',
+		route: '',
+		url: '',
+		params: '',
+		getImage: 'https://api.vvhan.com/api/wallpaper/mobileGirl',
+		path: RouterEnum.UserImage,
+	},
+	{
+		name: 'meizi',
+		route: '',
+		url: '',
+		params: 'type=image',
+		getImage: 'https://api.shenke.love/api/meizi.php',
+		path: RouterEnum.UserImage,
+	},
+	{
+		name: 'mjx',
+		route: '',
+		url: '',
+		params: 'type=image',
+		getImage: 'https://api.shenke.love/api/mjx.php',
 		path: RouterEnum.UserImage,
 	},
 ])
@@ -151,7 +189,7 @@ onMounted(() => {
 
 	&_content_cell {
 		display: flex;
-    flex-wrap: wrap;
+		flex-wrap: wrap;
 		margin: 2px;
 		&_item {
 			margin: 6px 12px;
