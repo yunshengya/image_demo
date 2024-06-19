@@ -39,7 +39,10 @@ function getItem(label: VueElement | string, key: string, icon?: any, children?:
 		type,
 	} as ItemType
 }
-const itemsList: ItemType[] = reactive([getItem('图片', RouterEnum.User, () => h(FileImageOutlined))])
+const itemsList: ItemType[] = reactive([
+  getItem('图片', RouterEnum.User, () => h(FileImageOutlined)),
+  getItem('视频', RouterEnum.Video, () => h(FileImageOutlined))
+])
 const itemNavSelect = reactive({
 	selectedKeys: ['/home'],
 	openKey: ['/home'],

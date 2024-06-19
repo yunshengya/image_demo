@@ -28,14 +28,17 @@ const images = ref<Image[]>([])
 
 const getImage = ref('') // 定义并初始化为空字符串
 
+const params = ref('')
+
 // 加载新图像的函数
 const fetchMoreImages = () => {
 	for (let i = 0; i < 10; i++) {
-		const width = 200 + Math.floor(Math.random() * 100)
-		const height = 200 + Math.floor(Math.random() * 100)
-		console.log(getImage.value)
+		const width = 100 + Math.floor(Math.random() * 100)
+		const height = 100 + Math.floor(Math.random() * 100)
+		const randomSuffix = Math.random().toString(36).substring(7) // 生成随机字符串作为唯一标识
+		const paramsValue = params.value ? `${params.value}&rand=${randomSuffix}` : `width=${width}&height=${height}&rand=${randomSuffix}`
 		const image = {
-			src: `${getImage.value}?width=${width}&height=${height}`,
+			src: `${getImage.value}?${paramsValue}`,
 			width,
 			height,
 		}
@@ -81,6 +84,7 @@ onMounted(async () => {
 	await router.isReady()
 	let obj = JSON.parse(router.currentRoute.value.query.app)
 	getImage.value = obj.getImage as string
+	if (obj?.params) params.value = obj.params
 	firstLoading.value = false
 	fetchMoreImages()
 	setObserver()

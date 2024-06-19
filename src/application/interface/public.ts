@@ -5,5 +5,6 @@ export enum RouterEnum {
   Notfond = '/404',
   Content = '/index/index',
   User = '/index/user',
-  UserVideo = '/index/user/video'
+  UserImage = '/index/user/image',
+  Video = '/index/video'
 }

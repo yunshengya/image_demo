@@ -54,21 +54,67 @@ const appList = reactive([
 		route: '',
 		url: '',
 		getImage: 'https://www.dmoe.cc/random.php',
-		path: RouterEnum.UserVideo,
+		path: RouterEnum.UserImage,
 	},
 	{
 		name: '女生头像',
 		route: '',
 		url: '',
 		getImage: 'https://api.vvhan.com/api/avatar/girl',
-		path: RouterEnum.UserVideo,
+		path: RouterEnum.UserImage,
 	},
 	{
 		name: '买家秀',
 		route: '',
 		url: '',
 		getImage: 'https://api.dzzui.com/api/imgtaobao',
-		path: RouterEnum.UserVideo,
+		path: RouterEnum.UserImage,
+	},
+	{
+		name: 'cosplay',
+		route: '',
+		url: '',
+		getImage: 'https://api.dzzui.com/api/cosplay',
+		path: RouterEnum.UserImage,
+	},
+	{
+		name: '动漫图片（女）',
+		route: '',
+		url: '',
+		getImage: 'http://api.dzzui.com/api/dongmannv',
+		path: RouterEnum.UserImage,
+	},
+	{
+		name: 'baisi',
+		route: '',
+		url: '',
+    params:'return=302',
+		getImage: 'https://v2.api-m.com/api/baisi',
+		path: RouterEnum.UserImage,
+	},
+	{
+		name: 'heisi',
+		route: '',
+		url: '',
+    params:'return=302',
+		getImage: 'https://v2.api-m.com/api/heisi',
+		path: RouterEnum.UserImage,
+	},
+	{
+		name: 'wallpaper',
+		route: '',
+		url: '',
+    params:'return=302',
+		getImage: 'https://v2.api-m.com/api/wallpaper',
+		path: RouterEnum.UserImage,
+	},
+	{
+		name: 'head',
+		route: '',
+		url: '',
+    params:'return=302',
+		getImage: 'https://v2.api-m.com/api/head',
+		path: RouterEnum.UserImage,
 	},
 ])
 
@@ -105,6 +151,7 @@ onMounted(() => {
 
 	&_content_cell {
 		display: flex;
+    flex-wrap: wrap;
 		margin: 2px;
 		&_item {
 			margin: 6px 12px;

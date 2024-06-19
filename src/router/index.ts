@@ -27,12 +27,17 @@ export const routes: RouteRecordRaw[] = [
         component: () => import('@/pages/content/user/user.vue'),
         children: [
           {
-            name: '视频',
-            path: RouterEnum.UserVideo,
-            component: () => import('@/pages/content/user/video/video.vue')
+            name: '图片',
+            path: RouterEnum.UserImage,
+            component: () => import('@/pages/content/user/image/image.vue')
           }
         ]
-      }
+      },
+      {
+        name: '视频',
+        path: RouterEnum.Video,
+        component: () => import('@/pages/content/video/video.vue')
+      },
     ]
     // children: [
     //   {
