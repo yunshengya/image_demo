@@ -18,9 +18,6 @@
         </a-layout-content>
       </a-layout>
     </a-layout-content>
-    <!-- <a-layout-footer style="text-align: center">
-      © 2023北京星汉未来网络科技有限公司
-    </a-layout-footer> -->
   </a-layout>
 </template>
 <script lang="ts" setup>
