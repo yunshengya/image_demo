@@ -1,1 +1,0 @@
-import{_ as e}from"./_plugin-vue_export-helper-c27b6911.js";import{o as _,c as o}from"./index-bb691660.js";const c={};function t(n,a){return _(),o("div",null," video ")}const s=e(c,[["render",t],["__scopeId","data-v-48bbda9c"]]);export{s as default};
