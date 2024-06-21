@@ -26,10 +26,10 @@ import { useRoute } from 'vue-router'
 
 const route = useRoute()
 
-const getRouter = (route: any, routes: any, paths: any) => {
-	console.log(route, routes, paths)
-	return route.name
-}
+// const getRouter = (route: any, routes: any, paths: any) => {
+// 	console.log(route, routes, paths)
+// 	return route.name
+// }
 
 const routesList = reactive<any[]>([])
 

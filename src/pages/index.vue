@@ -25,7 +25,7 @@
 </template>
 <script lang="ts" setup>
 import { reactive, VueElement, h, ref } from 'vue'
-import { FileImageOutlined } from '@ant-design/icons-vue'
+import { FileImageOutlined,VideoCameraOutlined } from '@ant-design/icons-vue'
 import { RouterEnum } from '@/application/interface/public'
 import type { ItemType } from 'ant-design-vue'
 import router from '@/router'
@@ -41,7 +41,7 @@ function getItem(label: VueElement | string, key: string, icon?: any, children?:
 }
 const itemsList: ItemType[] = reactive([
   getItem('图片', RouterEnum.User, () => h(FileImageOutlined)),
-  getItem('视频', RouterEnum.Video, () => h(FileImageOutlined))
+  getItem('视频', RouterEnum.Video, () => h(VideoCameraOutlined))
 ])
 const itemNavSelect = reactive({
 	selectedKeys: ['/home'],
