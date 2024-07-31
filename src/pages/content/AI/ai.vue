@@ -116,10 +116,10 @@ const history = async () => {
 }
 // 获取当前年月日时分秒
 // console.log(nowDate);
-// console.log(new Date().getTime());
-// content();
-// receive();
-// history();
+console.log(new Date().getTime());
+content();
+receive();
+history();
 
 
 
