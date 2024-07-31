@@ -163,9 +163,9 @@ const updateAppListUrls = async () => {
 }
 
 onMounted(() => {
-	getRand()
+	// getRand()
 	updateAppListUrls()
-	console.log(appList)
+	// console.log(appList)
 
 	const homeRoute = routes.find(v => v.name === '首页')
 	if (homeRoute) {

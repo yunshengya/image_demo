@@ -6,5 +6,7 @@ export enum RouterEnum {
   Content = '/index/index',
   User = '/index/user',
   UserImage = '/index/user/image',
-  Video = '/index/video'
+  Video = '/index/video',
+  Question = '/index/question',
+  Ai = '/index/ai'
 }

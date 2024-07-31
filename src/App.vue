@@ -1,6 +1,6 @@
 <template>
   <a-config-provider :locale="zhCN">
-    <div style="height: 100%;">
+    <div>
       <router-view></router-view>
     </div>
   </a-config-provider>
@@ -9,10 +9,10 @@
 import zhCN from 'ant-design-vue/es/locale/zh_CN'
 </script>
 <style  lang="scss">
-// @import '/src/resource/css/global.scss'
+// @import '/src/resource/css/_global.scss';
 $scrollbar-width: 6px; // 设置滚动条的宽度
-$scrollbar-thumb-color: #f0f0f0; // 设置滚动条滑块的颜色
-$scrollbar-track-color: #ffffff; // 设置滚动条轨道的颜色
+$scrollbar-thumb-color: #b9bbbc; // 设置滚动条滑块的颜色
+$scrollbar-track-color: #f5f5f5; // 设置滚动条轨道的颜色
 
 // 全局滚动条样式
 * {
